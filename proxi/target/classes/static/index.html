@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Proxy Service</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Fibonacci with Proxy (Active-Passive)</h1>
+    <form>
+        <label for="num">Number of elements:</label><br>
+        <input type="text" id="num" name="num" value="10"><br><br>
+        <input type="button" value="Submit" onclick="loadGetMsg()">
+    </form>
+    
+    <div id="getrespmsg"></div>
+
+    <script>
+        function loadGetMsg() {
+            let n = document.getElementById("num").value;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("getrespmsg").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "/proxy/fibonacci?value=" + n);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+Aquí tienes los comandos listos para copiar y pegar en cada una de tus 3 terminales:
+
+1. En la INSTANCIA 1 (98.92.178.70)
+bash
+git pull origin main
+cd instancia1
+mvn clean install
+mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
+2. En la INSTANCIA 2 (44.213.114.132)
+bash
+git pull origin main
+cd instancia2
+mvn clean install
+mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
+3. En el PROXI (3.80.133.141)
+Copia y pega este bloque entero:
+
+bash
+git pull origin main
+export MATH_SERVICE_A_URL=http://98.92.178.70:8081
+export MATH_SERVICE_B_URL=http://44.213.114.132:8081
+cd proxi
+mvn clean install
+mvn spring-boot:run
+⚠️ RECUERDA: Si el Proxi te sigue dando error, mira la pantalla de la terminal del Proxi. He añadido mensajes ahí para que te diga exactamente por qué no se puede conectar a las otras máquinas.
+
+Casi siempre es un puerto cerrado (8081) en el Security Group de AWS. No olvides abrirlo en las máquinas 1 y 2.
+
