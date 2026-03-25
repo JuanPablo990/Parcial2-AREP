@@ -32,7 +32,7 @@ public class MathController {
     }
 }
 
-record FibonacciResult(int value, List<Long> sequence) {}
+record TribonacciResult(int value, List<Long> sequence) {}
 
 
 
