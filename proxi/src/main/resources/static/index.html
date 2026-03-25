@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fibonacci Service - Active/Passive</title>
+    <title>tribonacci Service - Active/Passive</title>
     <style>
         :root {
             --bg: #0f172a;
@@ -67,7 +67,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Fibonacci Solver</h1>
+    <h1>triboonacci Solver</h1>
     <p>Enter the number of elements:</p>
     <input type="number" id="num" value="10" min="1">
     <br>
@@ -81,7 +81,7 @@
         const resDiv = document.getElementById('response');
         resDiv.innerHTML = "Computing...";
 
-        fetch('/proxy/fibonacci?value=' + n)
+        fetch('/proxy/tribonacci?value=' + n)
             .then(response => response.json())
             .then(data => {
                 if (data.error) {

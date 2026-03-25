@@ -17,7 +17,7 @@ public class MathController {
         List<Long> sequence = new ArrayList<>();
         if (n <= 0) return sequence;
 
-        long a = 0, b = 0,c = 0;
+        long a = 0, b = 0, c = 0;
         sequence.add(a);
         if (n == 1) return sequence;
 
