@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MathController {
 
-    @GetMapping("/fibonacci")
+    @GetMapping("/Tribonacci")
     public TribonacciResult getFibonacci(@RequestParam(value = "value") int n) {
         return new TribonacciResult(n, calculateTribonacci(n));
     }
