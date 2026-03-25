@@ -9,11 +9,11 @@ import java.util.List;
 public class MathController {
 
     @GetMapping("/fibonacci")
-    public FibonacciResult getFibonacci(@RequestParam(value = "value") int n) {
-        return new FibonacciResult(n, calculateFibonacci(n));
+    public TribonacciResult getFibonacci(@RequestParam(value = "value") int n) {
+        return new TribonacciResult(n, calculateTribonacci(n));
     }
 
-    private List<Long> calculateFibonacci(int n) {
+    private List<Long> calculateTribonacci(int n) {
         List<Long> sequence = new ArrayList<>();
         if (n <= 0) return sequence;
 
