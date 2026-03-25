@@ -107,4 +107,14 @@ Salida (JSON)
 
 ![img.png](img.png)
 
+# 2. Clonar en las maquinas EC2 el REPO
 
+![img_6.png](img_6.png)
+
+# 2. correr la instancia en EC2
+
+## proxi
+
+![img_5.png](img_5.png)
+
+## 
