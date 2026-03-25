@@ -17,16 +17,17 @@ public class MathController {
         List<Long> sequence = new ArrayList<>();
         if (n <= 0) return sequence;
 
-        long a = 0, b = 0;
+        long a = 0, b = 0,c = 0;
         sequence.add(a);
         if (n == 1) return sequence;
 
         sequence.add(b);
         for (int i = 2; i < n; i++) {
-            long next = a + b;
+            long next = a + b + c;
             sequence.add(next);
             a = b;
             b = next;
+            c = next;
         }
         return sequence;
     }
