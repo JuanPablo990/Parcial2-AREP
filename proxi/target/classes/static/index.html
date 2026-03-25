@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>tribonacci Proxy Service</title>
+    <title>Fibonacci Proxy Service</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>tribonacci with Proxy (Active-Passive)</h1>
+<h1>Fibonacci with Proxy (Active-Passive)</h1>
 <form>
     <label for="num">Number of elements:</label><br>
     <input type="text" id="num" name="num" value="10"><br><br>
@@ -22,7 +22,7 @@
         xhttp.onload = function() {
             document.getElementById("getrespmsg").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "/proxy/tribonacci?value=" + n);
+        xhttp.open("GET", "/proxy/fibonacci?value=" + n);
         xhttp.send();
     }
 </script>

@@ -113,8 +113,44 @@ Salida (JSON)
 
 # 2. correr la instancia en EC2
 
+## Ejecución 
+
+1. **Instancia 1 (Math Service):**
+   ```
+   cd instancia1
+   mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
+   ```
+
+2. **Instancia 2 (Math Service):**
+   ```
+   cd instancia2
+   mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8082"
+   ```
+
+3. **Proxy:**
+   ```
+   cd proxi
+   export MATH_SERVICE_A_URL=http://localhost:8081
+   export MATH_SERVICE_B_URL=http://localhost:8082
+   mvn spring-boot:run
+   ```
+
+
 ## proxi
 
 ![img_5.png](img_5.png)
 
-## 
+## instancia 1
+
+![img_8.png](img_8.png)
+
+## instancia 2
+
+![img_9.png](img_9.png)
+
+
+## cuando los dos servers estan caidos
+![img_7.png](img_7.png)
+
+## video
+https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/juan_nieto-co_mail_escuelaing_edu_co/IQCo60igE_CkTJLTxdFe52FBAfmVjgOe9wrfNS15jeRqXgA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tHwrwy
